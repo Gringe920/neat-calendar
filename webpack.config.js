@@ -1,0 +1,6 @@
+module.export = {
+    entry: '',
+    output: {
+        
+    }
+}
