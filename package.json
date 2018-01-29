@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev-server": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -24,5 +25,8 @@
     "react-dom": "^16.2.0",
     "sass-loader": "^6.0.6",
     "webpack": "^3.10.0"
+  },
+  "dependencies": {
+    "webpack-dev-server": "^2.11.1"
   }
 }
