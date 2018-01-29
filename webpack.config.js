@@ -1,7 +1,7 @@
 
 const path = require('path');
 
-module.export = {
+module.exports = {
     entry: path.join(__dirname, 'src', 'index.jsx'),
     output: {
         path: path.resolve(__dirname, 'src', 'bundle'),
@@ -13,7 +13,7 @@ module.export = {
             {
                 test: /\.scss$/,
                 exclude: /node_modules/,
-                loader: ['style-loader', 'css-loader', 'sass-loader']
+                loaders: ['style-loader', 'css-loader', 'sass-loader']
             },
             {
                 test:/\.js|jsx$/,
