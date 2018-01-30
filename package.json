@@ -26,7 +26,8 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "sass-loader": "^6.0.6",
-    "webpack": "^3.10.0"
+    "webpack": "^3.10.0",
+    "style-loader": "^0.13.0"
   },
   "dependencies": {
     "webpack-dev-server": "^2.11.1"
