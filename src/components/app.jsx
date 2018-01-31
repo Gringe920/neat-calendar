@@ -22,7 +22,7 @@ export default class App extends React.Component{
                      </div>
                      <div className="right-container right">
                         农历<br/>
-                        {lunarDate.lunarMonthName}月{lunarDate.lunarDayName}
+                        {lunarDate.lunarMonthName}{lunarDate.lunarDayName}
                      </div>
                 </div>
                 <div className="center-date text-center">
