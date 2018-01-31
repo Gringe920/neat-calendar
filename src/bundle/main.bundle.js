@@ -18305,7 +18305,6 @@ class App extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
                     '\u519C\u5386',
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
                     lunarDate.lunarMonthName,
-                    '\u6708',
                     lunarDate.lunarDayName
                 )
             ),
