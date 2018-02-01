@@ -1,6 +1,10 @@
 .clearfix:after{content:"";display:block;height:0;visibility:hidden;clear:both}
 .left{float:left}.right{float:right}
 .text-center{text-align: center}
+body{
+    max-width: 720px;
+    margin: 0 auto;
+}
 .container{
     background-color: #fff;
     padding: 80px;
