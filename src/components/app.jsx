@@ -3,18 +3,27 @@ import React from 'react';
 import './styles/index';
 
 import lunarCalendar from 'lunar-calendar';
-import moviesData from './../modules/movies-data';
+import {getMovieData} from './../modules/movies-data';
 
 export default class App extends React.Component{
-    contructor(props){
+    constructor(props){
+        super(props);
+        this.state = {
+            movieData: ''
+        }
+    }
 
+    componentDidMount(){
+        this.setState({
+            movieData: getMovieData()
+        })
     }
 
     render(){
         const date = new Date();
         const weekArr = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
         const lunarDate = lunarCalendar.solarToLunar(date.getFullYear(), date.getMonth() + 1, date.getDate())
-        console.log(moviesData);
+        console.log(this.state.movieData);
         return(
             <div className="container">
                 <div className="top-date clearfix">
