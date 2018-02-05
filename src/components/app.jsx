@@ -14,8 +14,10 @@ export default class App extends React.Component{
     }
 
     componentDidMount(){
-        this.setState({
-            movieData: getMovieData()
+        getMovieData((respData) => {
+            this.setState({
+                movieData: respData
+            })
         })
     }
 
