@@ -1,9 +1,9 @@
-import http from 'http';
+import https from 'https';
 
 export function getMovieData(callback){
-    const getUrl ='https://cors-anywhere.herokuapp.com/'+'https://api.douban.com/v2/movie/in_theaters?apikey=0b2bdeda43b5688921839c8ecb20399b&city=%E5%B9%BF%E5%B7%9E';
+    const getUrl ='https://api.douban.com/v2/movie/in_theaters?apikey=0b2bdeda43b5688921839c8ecb20399b&city=%E5%B9%BF%E5%B7%9E';
 
-    http.get(getUrl, (res) => {
+    https.get(getUrl, (res) => {
         let moviesData = '';
         //获取页面数据
         res.on('data', (data) => {
