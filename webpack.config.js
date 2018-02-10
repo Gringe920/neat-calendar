@@ -1,4 +1,4 @@
-
+const bourbon = require('node-bourbon').includePaths;
 const path = require('path');
 
 module.exports = {
@@ -13,7 +13,7 @@ module.exports = {
             {
                 test: /\.scss$/,
                 exclude: /node_modules/,
-                loaders: ['style-loader', 'css-loader', 'sass-loader']
+                loaders: ['style-loader', 'css-loader', 'sass-loader?includePaths[]=' + bourbon]
             },
             {
                 test:/\.js|jsx$/,

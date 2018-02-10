@@ -1,3 +1,7 @@
+@import "bourbon";
+.clearfix{
+    @include clearfix;
+}
 .clearfix:after{content:"";display:block;height:0;visibility:hidden;clear:both}
 .left{float:left}.right{float:right}
 .text-center{text-align: center}
