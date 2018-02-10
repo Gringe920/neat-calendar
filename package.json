@@ -31,7 +31,9 @@
     "style-loader": "^0.13.0"
   },
   "dependencies": {
+    "bourbon": "^5.0.0",
     "lunar-calendar": "^0.1.4",
+    "node-bourbon": "^4.2.8",
     "webpack-dev-server": "^2.11.1"
   }
 }
