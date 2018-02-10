@@ -25261,16 +25261,13 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(process) {/* harmony export (immutable) */ __webpack_exports__["a"] = getMovieData;
+/* harmony export (immutable) */ __webpack_exports__["a"] = getMovieData;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_https__ = __webpack_require__(53);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_https___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_https__);
 
 
-const isProd = process.env.NODE_ENV === 'prod';
-
 function getMovieData(callback) {
-    const prefix = isProd ? '' : 'https://cors-anywhere.herokuapp.com/';
-    const getUrl = prefix + 'https://api.douban.com/v2/movie/in_theaters?apikey=0b2bdeda43b5688921839c8ecb20399b&city=%E5%B9%BF%E5%B7%9E';
+    const getUrl = "" + 'https://api.douban.com/v2/movie/in_theaters?apikey=0b2bdeda43b5688921839c8ecb20399b&city=%E5%B9%BF%E5%B7%9E';
 
     __WEBPACK_IMPORTED_MODULE_0_https___default.a.get(getUrl, res => {
         let moviesData = '';
@@ -25285,7 +25282,6 @@ function getMovieData(callback) {
         });
     });
 };
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
 /* 53 */

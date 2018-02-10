@@ -1,5 +1,8 @@
 
 const path = require('path');
+const webpack = require('webpack');
+
+const isProd = process.env.WEBPACK_ENV === 'prod';
 
 module.exports = {
     entry: path.join(__dirname, 'src', 'index.jsx'),
@@ -22,6 +25,11 @@ module.exports = {
             }
         ]
     },
+    plugins: [
+        new webpack.DefinePlugin({
+            url_prefix: isProd ? '""' : '"https://cors-anywhere.herokuapp.com/"'
+        })
+    ],
     resolve:{
         extensions: ['.js', '.jsx', '.scss']
     },
