@@ -1,14 +1,18 @@
+
+const readDirSync = require('./src/cfg/get-bundle-name');
 const bourbon = require('node-bourbon').includePaths;
 const path = require('path');
 const webpack = require('webpack');
 
 const isProd = process.env.WEBPACK_ENV === 'prod';
 
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+
 module.exports = {
     entry: path.join(__dirname, 'src', 'index.jsx'),
     output: {
         path: path.resolve(__dirname, 'src', 'bundle'),
-        filename: '[name].bundle.js',
+        filename: '[name].bundle.[chunkhash:6].js',
         publicPath: 'bundle'
     },
     module: {
@@ -27,8 +31,10 @@ module.exports = {
     },
     plugins: [
         new webpack.DefinePlugin({
-            url_prefix: isProd ? '""' : '"https://cors-anywhere.herokuapp.com/"'
-        })
+            url_prefix: isProd ? '""' : '"https://cors-anywhere.herokuapp.com/"',
+            bundleName: readDirSync(path.resolve(__dirname, 'src', 'bundle'))
+        }),
+        new CleanWebpackPlugin([path.resolve(__dirname, 'src/bundle/*')])
     ],
     resolve:{
         extensions: ['.js', '.jsx', '.scss']

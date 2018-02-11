@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev-server": "export WEBPACK_ENV=dev&&webpack-dev-server",
+    "dev-server": "set WEBPACK_ENV=dev&&webpack-dev-server",
     "prod-webpack": "export WEBPACK_ENV=prod&&webpack"
   },
   "repository": {
@@ -28,7 +28,8 @@
     "react-dom": "^16.2.0",
     "sass-loader": "^6.0.6",
     "webpack": "^3.10.0",
-    "style-loader": "^0.13.0"
+    "style-loader": "^0.13.0",
+    "clean-webpack-plugin": "^0.1.17"
   },
   "dependencies": {
     "bourbon": "^5.0.0",
