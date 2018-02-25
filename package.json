@@ -33,6 +33,7 @@
   },
   "dependencies": {
     "bourbon": "^5.0.0",
+    "html-webpack-plugin": "^2.30.1",
     "lunar-calendar": "^0.1.4",
     "node-bourbon": "^4.2.8",
     "webpack-dev-server": "^2.11.1"

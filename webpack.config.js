@@ -1,5 +1,4 @@
 
-const readDirSync = require('./src/cfg/get-bundle-name');
 const bourbon = require('node-bourbon').includePaths;
 const path = require('path');
 const webpack = require('webpack');
@@ -7,7 +6,17 @@ const webpack = require('webpack');
 const isProd = process.env.WEBPACK_ENV === 'prod';
 
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+var fs = require("fs");
+var root = path.join(__dirname, 'src/bundle/'); 
+
+function readDirSync(path){  
+    var pa = fs.readdirSync(path);  
+    pa.forEach(function(ele,index){    
+        return ele;    
+    });
+};
 module.exports = {
     entry: path.join(__dirname, 'src', 'index.jsx'),
     output: {
@@ -34,7 +43,11 @@ module.exports = {
             url_prefix: isProd ? '""' : '"https://cors-anywhere.herokuapp.com/"',
             bundleName: readDirSync(path.resolve(__dirname, 'src', 'bundle'))
         }),
-        new CleanWebpackPlugin([path.resolve(__dirname, 'src/bundle/*')])
+        new CleanWebpackPlugin([path.resolve(__dirname, 'src/bundle/*')]),
+        new HtmlWebpackPlugin({
+            title: 'neat-calendar',
+            filename: '../index.html'
+        }),
     ],
     resolve:{
         extensions: ['.js', '.jsx', '.scss']
@@ -42,6 +55,6 @@ module.exports = {
     devServer: {
         historyApiFallback: {
             index: 'src/index.html'
-        }
+        },
     }
 };
