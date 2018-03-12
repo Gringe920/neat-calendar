@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev-server": "set WEBPACK_ENV=dev&&webpack-dev-server",
-    "prod-webpack": "export WEBPACK_ENV=prod&&webpack"
+    "prod-webpack": "set WEBPACK_ENV=prod&&webpack"
   },
   "repository": {
     "type": "git",

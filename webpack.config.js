@@ -21,7 +21,7 @@ module.exports = {
     entry: path.join(__dirname, 'src', 'index.jsx'),
     output: {
         path: path.resolve(__dirname, 'src', 'bundle'),
-        filename: '[name].bundle.[chunkhash:6].js',
+        filename: '[name].bundle.js',
         publicPath: 'bundle'
     },
     module: {
@@ -40,8 +40,7 @@ module.exports = {
     },
     plugins: [
         new webpack.DefinePlugin({
-            url_prefix: isProd ? '""' : '"https://cors-anywhere.herokuapp.com/"',
-            bundleName: readDirSync(path.resolve(__dirname, 'src', 'bundle'))
+            url_prefix: isProd ? '""' : '"https://cors-anywhere.herokuapp.com/"'
         }),
         new CleanWebpackPlugin([path.resolve(__dirname, 'src/bundle/*')]),
         new HtmlWebpackPlugin({
