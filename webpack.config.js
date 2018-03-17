@@ -43,10 +43,10 @@ module.exports = {
             url_prefix: isProd ? '""' : '"https://cors-anywhere.herokuapp.com/"'
         }),
         new CleanWebpackPlugin([path.resolve(__dirname, 'src/bundle/*')]),
-        new HtmlWebpackPlugin({
-            title: 'neat-calendar',
-            filename: '../index.html'
-        }),
+        // new HtmlWebpackPlugin({
+        //     title: 'neat-calendar',
+        //     filename: '../index.html'
+        // }),
     ],
     resolve:{
         extensions: ['.js', '.jsx', '.scss']
