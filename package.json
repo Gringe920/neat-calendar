@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev-server": "export WEBPACK_ENV=dev&&webpack-dev-server",
-    "prod-webpack": "export WEBPACK_ENV=prod&&webpack"
+    "dev-server": "set WEBPACK_ENV=dev&&webpack-dev-server",
+    "prod-webpack": "set WEBPACK_ENV=prod&&webpack"
   },
   "repository": {
     "type": "git",
@@ -28,10 +28,12 @@
     "react-dom": "^16.2.0",
     "sass-loader": "^6.0.6",
     "webpack": "^3.10.0",
-    "style-loader": "^0.13.0"
+    "style-loader": "^0.13.0",
+    "clean-webpack-plugin": "^0.1.17"
   },
   "dependencies": {
     "bourbon": "^5.0.0",
+    "html-webpack-plugin": "^2.30.1",
     "lunar-calendar": "^0.1.4",
     "node-bourbon": "^4.2.8",
     "webpack-dev-server": "^2.11.1"
