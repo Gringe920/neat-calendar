@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev-server": "set WEBPACK_ENV=dev&&webpack-dev-server",
-    "prod-webpack": "set WEBPACK_ENV=prod&&webpack"
+    "dev-server": "export WEBPACK_ENV=dev&&webpack-dev-server",
+    "prod-webpack": "export WEBPACK_ENV=prod&&webpack"
   },
   "repository": {
     "type": "git",
@@ -21,15 +21,16 @@
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.17",
     "css-loader": "^0.28.9",
     "node-sass": "^4.7.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "sass-loader": "^6.0.6",
-    "webpack": "^3.10.0",
     "style-loader": "^0.13.0",
-    "clean-webpack-plugin": "^0.1.17"
+    "webpack": "^3.10.0"
   },
   "dependencies": {
     "bourbon": "^5.0.0",
